@@ -1,0 +1,177 @@
+[
+    {
+        "id": "b460ac028e9e3261",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c4c4c18916b8375e",
+        "type": "mqtt in",
+        "z": "b460ac028e9e3261",
+        "name": "",
+        "topic": "vagas/gabrielEspanhol/thefive/ps/iot/ia/2022/",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8e14717cd9b13caa",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 320,
+        "wires": [
+            [
+                "e42da707a08693c0",
+                "0c32a296847d2b04",
+                "8fbb6f0fe9b8de04"
+            ]
+        ]
+    },
+    {
+        "id": "e42da707a08693c0",
+        "type": "debug",
+        "z": "b460ac028e9e3261",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9b68be824e9d71e4",
+        "type": "ui_text",
+        "z": "b460ac028e9e3261",
+        "group": "b07151c67b2ebc44",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Vagas:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 750,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "0c32a296847d2b04",
+        "type": "function",
+        "z": "b460ac028e9e3261",
+        "name": "function 1",
+        "func": "if (msg.payload == \"A\"){\n    msg.payload = \"Somente a vaga A disponível\" \n    return msg\n} else if (msg.payload == \"B\"){\n    msg.payload = \"Somente a vaga B disponível\"\n    return msg\n} else if (msg.payload == \"AB\") {\n    msg.payload = \"Ambas as vagas disponíveis\"\n    return msg\n} else if (msg.payload == \"X\") {\n    msg.payload = \"Nenhuma vaga disponível\"\n    return msg\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 500,
+        "wires": [
+            [
+                "9b68be824e9d71e4"
+            ]
+        ]
+    },
+    {
+        "id": "25cd434fa8485f8c",
+        "type": "ui_gauge",
+        "z": "b460ac028e9e3261",
+        "name": "",
+        "group": "b07151c67b2ebc44",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Vagas ocupadas",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "2",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 860,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "8fbb6f0fe9b8de04",
+        "type": "function",
+        "z": "b460ac028e9e3261",
+        "name": "function 2",
+        "func": "if (msg.payload == \"A\"){\n    msg.payload = 1 \n    return msg\n} else if (msg.payload == \"B\"){\n    msg.payload = 1 \n    return msg\n} else if (msg.payload == \"AB\") {\n    msg.payload = 0 \n    return msg\n} else if (msg.payload == \"X\") {\n    msg.payload = 2\n    return msg\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 400,
+        "wires": [
+            [
+                "25cd434fa8485f8c"
+            ]
+        ]
+    },
+    {
+        "id": "8e14717cd9b13caa",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b07151c67b2ebc44",
+        "type": "ui_group",
+        "name": "Dashboard vagas",
+        "tab": "1ad63eccf67bdd8f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1ad63eccf67bdd8f",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

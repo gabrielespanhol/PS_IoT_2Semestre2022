@@ -1,0 +1,245 @@
+[
+    {
+        "id": "9b6b9139e6b74421",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b8ec4b2a6681ea92",
+        "type": "inject",
+        "z": "9b6b9139e6b74421",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Somente a vaga A disponível",
+        "payload": "A",
+        "payloadType": "str",
+        "x": 410,
+        "y": 280,
+        "wires": [
+            [
+                "da45b031b0ff4765",
+                "0c7490e3cd5a52f0"
+            ]
+        ]
+    },
+    {
+        "id": "5998afc674142d13",
+        "type": "inject",
+        "z": "9b6b9139e6b74421",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Somente a vaga B disponível ",
+        "payload": "B",
+        "payloadType": "str",
+        "x": 410,
+        "y": 380,
+        "wires": [
+            [
+                "ec7375692f375e8a",
+                "0c7490e3cd5a52f0"
+            ]
+        ]
+    },
+    {
+        "id": "452db8ac4e970dad",
+        "type": "inject",
+        "z": "9b6b9139e6b74421",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Ambas as vagas disponíveis",
+        "payload": "AB",
+        "payloadType": "str",
+        "x": 410,
+        "y": 480,
+        "wires": [
+            [
+                "d2b3dc2ab256f512",
+                "0c7490e3cd5a52f0"
+            ]
+        ]
+    },
+    {
+        "id": "6ee7744485e2c0dc",
+        "type": "inject",
+        "z": "9b6b9139e6b74421",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Nenhuma vaga disponível ",
+        "payload": "X",
+        "payloadType": "str",
+        "x": 400,
+        "y": 580,
+        "wires": [
+            [
+                "94234313a4321050",
+                "0c7490e3cd5a52f0"
+            ]
+        ]
+    },
+    {
+        "id": "da45b031b0ff4765",
+        "type": "mqtt out",
+        "z": "9b6b9139e6b74421",
+        "name": "",
+        "topic": "vagas/gabrielEspanhol/thefive/ps/iot/ia/2022/",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8e14717cd9b13caa",
+        "x": 870,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ec7375692f375e8a",
+        "type": "mqtt out",
+        "z": "9b6b9139e6b74421",
+        "name": "",
+        "topic": "vagas/gabrielEspanhol/thefive/ps/iot/ia/2022/",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8e14717cd9b13caa",
+        "x": 870,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d2b3dc2ab256f512",
+        "type": "mqtt out",
+        "z": "9b6b9139e6b74421",
+        "name": "",
+        "topic": "vagas/gabrielEspanhol/thefive/ps/iot/ia/2022/",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8e14717cd9b13caa",
+        "x": 870,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "94234313a4321050",
+        "type": "mqtt out",
+        "z": "9b6b9139e6b74421",
+        "name": "",
+        "topic": "vagas/gabrielEspanhol/thefive/ps/iot/ia/2022/",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8e14717cd9b13caa",
+        "x": 870,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "0c7490e3cd5a52f0",
+        "type": "debug",
+        "z": "9b6b9139e6b74421",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "8e14717cd9b13caa",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
