@@ -14,6 +14,12 @@ Patrick Luiz Arruda RM: 83941 4SIS
 
 Leonardo Jordão Lopes RM: 83659 4SIS
 
+#
+
+link para demostração do projeto: https://youtu.be/-AHaFbo1RYM
+
+#
+
 ### Parte 1 [5 pontos] Link do projeto: https://www.tinkercad.com/things/5w4jqXmWkB2
 
 Objetivo era simular um estacionamento de shopping
