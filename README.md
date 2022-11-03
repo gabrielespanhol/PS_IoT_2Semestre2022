@@ -1,5 +1,7 @@
 # PS_IoT_2Semestre2022
 
+## Disciplina: AI ENGINEERING, COGNITIVE AND SEMANTIC COMPUTATION & IOT
+
 ## The Five
 
 Isabella Oliveira Queiroz RM: 83588 4SIS
@@ -12,9 +14,7 @@ Patrick Luiz Arruda RM: 83941 4SIS
 
 Leonardo Jordão Lopes RM: 83659 4SIS
 
-### Disciplina: AI ENGINEERING, COGNITIVE AND SEMANTIC COMPUTATION & IOT
-
-1. [5 pontos] Link do projeto: https://www.tinkercad.com/things/5w4jqXmWkB2
+### Parte 1 [5 pontos] Link do projeto: https://www.tinkercad.com/things/5w4jqXmWkB2
 
 Objetivo era simular um estacionamento de shopping
 
@@ -27,7 +27,7 @@ imagem do circuito:
 
 ![alt text](https://github.com/gabrielespanhol/PS_IoT_2Semestre2022/blob/main/Parte1/Arduino_Sensores.png)
 
-2. [5 pontos] Inspirado em uma arquitetura simples IoT, gateway utilizando o Node-Red.
+### Parte 2. [5 pontos] Inspirado em uma arquitetura simples IoT, gateway utilizando o Node-Red.
 
 Fluxo1 - O gateway envia via protocolo MQTT. Simula um estacionamento com 2 vagas (vaga A e vaga B) utilizando o node “inject”.
 
