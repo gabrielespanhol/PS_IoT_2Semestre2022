@@ -26,3 +26,21 @@ Objetivo era simular um estacionamento de shopping
 imagem do circuito:
 
 ![alt text](https://github.com/gabrielespanhol/PS_IoT_2Semestre2022/blob/main/Parte1/Arduino_Sensores.png)
+
+2. [5 pontos] Inspirado em uma arquitetura simples IoT, gateway utilizando o Node-Red.
+
+Fluxo1 - O gateway envia via protocolo MQTT. Simula um estacionamento com 2 vagas (vaga A e vaga B) utilizando o node “inject”.
+
+Fluxo2 - Dashboard que recebe os dados via protocolo MQTT e exibe o status em um Dashboard
+
+fluxo 1 producer:
+
+![alt text](https://github.com/gabrielespanhol/PS_IoT_2Semestre2022/blob/main/Parte2/Fluxo_Producer.png)
+
+fluxo 2 Consumer:
+
+![alt text](https://github.com/gabrielespanhol/PS_IoT_2Semestre2022/blob/main/Parte2/Fluxo_Consumer.png)
+
+Dashboard vagas:
+
+![alt text](https://github.com/gabrielespanhol/PS_IoT_2Semestre2022/blob/main/Parte2/Dashboard_Vagas.png)
